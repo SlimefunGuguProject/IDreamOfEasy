@@ -64,7 +64,7 @@ public class Setup {
 
         IDreamOfEasy plugin = IDreamOfEasy.getInstance();
 
-        ItemStack groupItem = new CustomItemStack(Material.CALIBRATED_SCULK_SENSOR, "&2I Dream of Easy", "", "I wish this worked!");
+        ItemStack groupItem = new CustomItemStack(Material.CALIBRATED_SCULK_SENSOR, "&2易梦");
         NamespacedKey groupId = new NamespacedKey(IDreamOfEasy.getInstance(), "i_dream_of_easy");
         ItemGroup group = new ItemGroup(groupId, groupItem);
 
@@ -79,42 +79,42 @@ public class Setup {
         SlimefunItemStack terrabore = new SlimefunItemStack(
             "IDOE_TERRABORE",
             Material.NETHERITE_SHOVEL,
-            "&eTerrabore",
+            "&e盾构机",
             "",
-            "&fThis Multiblock will mine",
-            "&ceverything &fin a 7x7 area",
-            "&funderneath it.",
-            "&fPlace coal or similar in its",
-            "&fchest to fuel this machine.",
+            "&f该多方块结构会挖掘",
+            "&f下方 7x7 区域内的",
+            "&c任何方块&f。",
+            "&f放入煤矿或其他相似物品",
+            "&f作为机器燃料。",
             ""
         );
 
         SlimefunItemStack terraboreAdvanced = new SlimefunItemStack(
             "IDOE_TERRABORE_ADVANCED",
             Material.NETHERITE_PICKAXE,
-            "&eAdvanced Terrabore",
+            "&e高级盾构机",
             "",
-            "&fThis Multiblock will mine",
-            "&ceverything except ores &fin",
-            "&fa 11x11 area underneath it.",
-            "&fPlace a bucket of fuel or lava in",
-            "&fits chest to fuel this machine.",
+            "&f该多方块结构会挖掘",
+            "&f下方 11x11 区域内的",
+            "&c任何方块&f。",
+            "&f放入煤矿或其他相似物品",
+            "&f作为机器燃料。",
             "",
-            "&a+ Silk Touch"
+            "&a+ 精准采集"
         );
 
         SlimefunItemStack terraboreElite = new SlimefunItemStack(
             "IDOE_TERRABORE_ELITE",
             Material.NETHERITE_BLOCK,
-            "&eAdvanced Terrabore",
+            "&e精英盾构机",
             "",
-            "&fThis Multiblock will mine",
-            "&ceverything &fin a 21x21 area",
-            "&funderneath it.",
-            "&fPlace &auranium &fin its chest",
-            "&fto fuel this machine.",
+            "&f该多方块结构会挖掘",
+            "&f下方 21x21 区域内的",
+            "&c任何方块&f。",
+            "&f放入煤矿或其他相似物品",
+            "&f作为机器燃料。",
             "",
-            "&a+ Silk Touch"
+            "&a+ 精准采集"
         );
 
         //////////////////////////////////////////////
@@ -123,10 +123,10 @@ public class Setup {
         SlimefunItemStack supplyHopper = new SlimefunItemStack(
             "IDOE_HOPPER_SUPPLY",
             Material.HOPPER,
-            "&aSupply Hopper",
+            "&a补给漏斗",
             "",
-            "&fStand under this to automatically",
-            "&fpush items to your inventory",
+            "&f站在该漏斗下方会自动",
+            "&f接收物品到你的物品栏",
             "",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
@@ -136,12 +136,12 @@ public class Setup {
         SlimefunItemStack playerHopper = new SlimefunItemStack(
             "IDOE_HOPPER_PLAYER",
             Material.HOPPER,
-            "&aPlayer Hopper",
+            "&a玩家漏斗",
             "",
-            "&fStand on this to automatically",
-            "&fpull items out of your inventory",
+            "&f站在该漏斗上方会自动",
+            "&f吸取你物品栏中的物品",
             "",
-            "&8⇨ &4Ignores equipped items!",
+            "&8⇨ &4不会吸取护甲与副手物品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(250)
@@ -150,62 +150,62 @@ public class Setup {
         SlimefunItemStack stackDispenser = new SlimefunItemStack(
             "IDOE_DISPENSER_STACK",
             Material.DISPENSER,
-            "&aStack Dispenser",
+            "&a堆叠发射器",
             "",
-            "&fTries to dispense whole",
-            "&fstacks",
+            "&f会试图发射",
+            "&f一整组物品",
             ""
         );
 
         SlimefunItemStack electricCable = new SlimefunItemStack(
             "IDOE_ELECTRIC_CABLE",
             Material.CHAIN,
-            "&aElectric Cable",
+            "&a电线",
             "",
-            "&fDamages anything that touches it",
+            "&f会伤害任何触碰的实体",
             "",
-            "&8⇨ &aIgnores owner!",
+            "&8⇨ &a不会对拥有者生效",
             "",
             LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(100),
             "",
-            "&eDamage: &72"
+            "&e伤害：&72"
         );
 
         SlimefunItemStack electricCable2 = new SlimefunItemStack(
             "IDOE_ELECTRIC_CABLE_2",
             Material.YELLOW_STAINED_GLASS_PANE,
-            "&aElectric Cable &7(&eII&7)",
+            "&a电线 &7(&eII&7)",
             "",
-            "&fDamages anything that touches it",
+            "&f会伤害任何触碰的实体",
             "",
-            "&8⇨ &aIgnores owner!",
+            "&8⇨ &a不会对拥有者生效",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(150),
             "",
-            "&eDamage: &74"
+            "&e伤害：&74"
         );
 
         SlimefunItemStack electricCable3 = new SlimefunItemStack(
             "IDOE_ELECTRIC_CABLE_3",
             Material.IRON_BARS,
-            "&aElectric Cable &7(&eIII&7)",
+            "&a电线 &7(&eIII&7)",
             "",
-            "&fDamages anything that touches it",
+            "&f会伤害任何触碰的实体",
             "",
-            "&8⇨ &aIgnores owner!",
+            "&8⇨ &a不会对拥有者生效",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(200),
             "",
-            "&eDamage: &76"
+            "&e伤害：&76"
         );
 
         SlimefunItemStack radiationAbsorber = new SlimefunItemStack(
             "IDOE_RADIATION_ABSORBER",
             Material.GREEN_CONCRETE,
-            "&aRadiation Absorber",
+            "&a辐射吸收器",
             "",
             LoreBuilder.range(2),
             "",
@@ -216,7 +216,7 @@ public class Setup {
         SlimefunItemStack radiationAbsorber2 = new SlimefunItemStack(
             "IDOE_RADIATION_ABSORBER_2",
             Material.LIME_CONCRETE,
-            "&aRadiation Absorber &7(&eII&7)",
+            "&a辐射吸收器 &7(&eII&7)",
             "",
             LoreBuilder.range(4),
             "",
@@ -227,7 +227,7 @@ public class Setup {
         SlimefunItemStack radiationAbsorber3 = new SlimefunItemStack(
             "IDOE_RADIATION_ABSORBER_3",
             Material.SLIME_BLOCK,
-            "&aRadiation Absorber &7(&eIII&7)",
+            "&a辐射吸收器 &7(&eIII&7)",
             "",
             LoreBuilder.range(7),
             "",
@@ -238,7 +238,7 @@ public class Setup {
         SlimefunItemStack electricBlastFurnace = new SlimefunItemStack(
             "IDOE_ELECTRIC_BLASTFURNACE",
             Material.BLAST_FURNACE,
-            "&aElectric Blast Furnace",
+            "&a电力高炉",
             "",
             LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE),
             LoreBuilder.speed(2),
@@ -248,7 +248,7 @@ public class Setup {
         SlimefunItemStack electricBlastFurnace2 = new SlimefunItemStack(
             "IDOE_ELECTRIC_BLASTFURNACE_2",
             Material.BLAST_FURNACE,
-            "&aElectric Blast Furnace &7(&eII&7)",
+            "&a电力高炉 &7(&eII&7)",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.speed(4),
@@ -258,7 +258,7 @@ public class Setup {
         SlimefunItemStack electricBlastFurnace3 = new SlimefunItemStack(
             "IDOE_ELECTRIC_BLASTFURNACE_3",
             Material.BLAST_FURNACE,
-            "&aElectric Blast Furnace &7(&eIII&7)",
+            "&a电力高炉 &7(&eIII&7)",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(8),
@@ -268,7 +268,7 @@ public class Setup {
         SlimefunItemStack electricSmoker = new SlimefunItemStack(
             "IDOE_ELECTRIC_SMOKER",
             Material.SMOKER,
-            "&aElectric Smoker",
+            "&a电力烟熏炉",
             "",
             LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE),
             LoreBuilder.speed(2),
@@ -278,7 +278,7 @@ public class Setup {
         SlimefunItemStack electricSmoker2 = new SlimefunItemStack(
             "IDOE_ELECTRIC_SMOKER_2",
             Material.SMOKER,
-            "&aElectric Smoker &7(&eII&7)",
+            "&a电力烟熏炉 &7(&eII&7)",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.speed(4),
@@ -288,7 +288,7 @@ public class Setup {
         SlimefunItemStack electricSmoker3 = new SlimefunItemStack(
             "IDOE_ELECTRIC_SMOKER_3",
             Material.SMOKER,
-            "&aElectric Smoker &7(&eIII&7)",
+            "&a电力烟熏炉 &7(&eIII&7)",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(8),
@@ -298,7 +298,7 @@ public class Setup {
         SlimefunItemStack electricLogStripper = new SlimefunItemStack(
             "IDOE_ELECTRIC_LOG_STRIPPER",
             Material.STONECUTTER,
-            "&aElectric Log Stripper",
+            "&a电力去皮器",
             "",
             LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE),
             LoreBuilder.speed(2),
@@ -308,7 +308,7 @@ public class Setup {
         SlimefunItemStack electricLogStripper2 = new SlimefunItemStack(
             "IDOE_ELECTRIC_LOG_STRIPPER_2",
             Material.STONECUTTER,
-            "&aElectric Log Stripper &7(&eII&7)",
+            "&a电力去皮器 &7(&eII&7)",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.speed(4),
@@ -318,7 +318,7 @@ public class Setup {
         SlimefunItemStack electricLogStripper3 = new SlimefunItemStack(
             "IDOE_ELECTRIC_LOG_STRIPPER_3",
             Material.STONECUTTER,
-            "&aElectric Log Stripper &7(&eIII&7)",
+            "&a电力去皮器 &7(&eIII&7)",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(8),
@@ -328,7 +328,7 @@ public class Setup {
         SlimefunItemStack electricShearer = new SlimefunItemStack(
             "IDOE_ELECTRIC_SHEARER",
             Material.LOOM,
-            "&aElectric Shearer",
+            "&a电力剪毛机",
             "",
             LoreBuilder.range(4),
             "",
@@ -339,10 +339,10 @@ public class Setup {
         SlimefunItemStack zombieRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_ZOMBIE",
             REPELLER,
-            "&aZombie Repeller",
+            "&a僵尸抑制器",
             "",
-            "&fPlace this to repel all",
-            "&fZombies in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(125)
@@ -351,10 +351,10 @@ public class Setup {
         SlimefunItemStack spiderRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_SPIDER",
             REPELLER,
-            "&aSpider Repeller",
+            "&a蜘蛛抑制器",
             "",
-            "&fPlace this to repel all",
-            "&fSpiders in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(125)
@@ -363,10 +363,10 @@ public class Setup {
         SlimefunItemStack skeletonRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_SKELETON",
             REPELLER,
-            "&aSkeleton Repeller",
+            "&a骷髅抑制器",
             "",
-            "&fPlace this to repel all",
-            "&fSkeletons in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(125)
@@ -375,10 +375,10 @@ public class Setup {
         SlimefunItemStack creeperRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_CREEPER",
             REPELLER,
-            "&aCreeper Repeller",
+            "&a苦力怕抑制器",
             "",
-            "&fPlace this to repel all",
-            "&fCreepers in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(125)
@@ -387,10 +387,10 @@ public class Setup {
         SlimefunItemStack slimeRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_SLIME",
             REPELLER,
-            "&aSlime Repeller",
+            "&a史莱姆抑制器",
             "",
-            "&fPlace this to repel all",
-            "&fSlimes in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(175)
@@ -399,10 +399,10 @@ public class Setup {
         SlimefunItemStack zombieVillagerRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_ZOMBIE_VILLAGER",
             REPELLER,
-            "&aZombie Villager Repeller",
+            "&a僵尸村民",
             "",
-            "&fPlace this to repel all",
-            "&fZombie Villagers in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(125)
@@ -411,10 +411,10 @@ public class Setup {
         SlimefunItemStack batRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_BAT",
             REPELLER,
-            "&aBat Repeller",
+            "&a蝙蝠抑制器",
             "",
-            "&fPlace this to repel all",
-            "&fBats in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(75)
@@ -423,10 +423,10 @@ public class Setup {
         SlimefunItemStack endermanRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_ENDERMAN",
             REPELLER,
-            "&aEnderman Repeller",
+            "&a末影人",
             "",
-            "&fPlace this to repel all",
-            "&fEnderman in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(125)
@@ -435,10 +435,10 @@ public class Setup {
         SlimefunItemStack witchRepeller = new SlimefunItemStack(
             "IDOE_REPELLER_WITCH",
             REPELLER,
-            "&aWitch Repeller",
+            "&a女巫抑制器",
             "",
-            "&fPlace this to repel all",
-            "&fWitches in a chunk",
+            "&f在区块中放置该机器",
+            "&f将阻止指定生物的生成",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerPerSecond(125)
@@ -451,22 +451,22 @@ public class Setup {
         SlimefunItemStack magnetoid = new SlimefunItemStack(
             "IDOE_MAGNETOID",
             Material.ECHO_SHARD,
-            "&aMagnetoid",
+            "&a磁石",
             "",
-            "&fMagnetoids attract nearby items",
+            "&f磁石会不断吸收周围的物品",
             "",
             LoreBuilder.powerCharged(0, 50),
             LoreBuilder.range(8),
             "",
-            "&eOffhand &7to use"
+            "&e副手手持&7以使用"
         );
 
         SlimefunItemStack jawn = new SlimefunItemStack(
             "IDOE_JAWN",
             Material.BONE,
-            "&aJawn",
+            "&a头颅移除器",
             "",
-            "&fInstantly break any head",
+            "&f可瞬间破坏任何头颅",
             "",
             LoreBuilder.RIGHT_CLICK_TO_USE
         );
@@ -474,14 +474,13 @@ public class Setup {
         SlimefunItemStack lavaBoat = new SlimefunItemStack(
             "IDOE_LAVABOAT",
             Material.DARK_OAK_BOAT,
-            "&aLava Boat",
+            "&a岩浆船",
             "",
-            "&fPlace a fire proof boat",
-            "&fat your feet to traverse",
-            "&fover lava",
+            "&f在脚下放置一艘防火船",
+            "&f以在岩浆上行驶",
             "",
-            "&8⇨ &4Not buoyant in water!",
-            "&8⇨ &4Hot!",
+            "&8⇨ &4在水中无浮力",
+            "&8⇨ &4烫烫烫！",
             "",
             LoreBuilder.RIGHT_CLICK_TO_USE
         );
@@ -489,24 +488,24 @@ public class Setup {
         SlimefunItemStack trimVault = new SlimefunItemStack(
             "IDOE_TRIM_VAULT",
             TRIM_VAULT,
-            "&aTrim Vault",
+            "&a盔甲纹饰宝库",
             "",
-            "&fBreak to receive a random",
-            "&fSmithing Template",
+            "&f破坏以获得随机的",
+            "&f盔甲纹饰模版",
             ""
         );
 
         SlimefunItemStack wisterShears = new SlimefunItemStack(
             "IDOE_WISTER_SHEARS",
             Material.SHEARS,
-            "&aWister Shears",
+            "&a韦斯特之剪",
             "",
-            "&fShear all the things",
+            "&f可以修剪所有的东西",
             "",
-            "&8⇨ &aIndestructible!",
+            "&8⇨ &a不可破坏",
             "",
-            "&eLeft Click&7 to use on leaves/grass",
-            "&eRight Click&7 to use on mobs"
+            "&e左键点击&7以修剪树叶于草丛",
+            "&e右键点击&7对生物使用"
         );
 
         ItemMeta wistermeta = wisterShears.getItemMeta();
@@ -517,10 +516,9 @@ public class Setup {
         SlimefunItemStack chisel = new SlimefunItemStack(
             "IDOE_CHISEL",
             Material.POINTED_DRIPSTONE,
-            "&aChisel",
+            "&a凿子",
             "",
-            "&fChanges some blocks to",
-            "&ftheir chiseled form",
+            "&f将部分方块雕纹",
             "",
             LoreBuilder.powerCharged(0, 250),
             "",
@@ -530,9 +528,9 @@ public class Setup {
         SlimefunItemStack electricPick = new SlimefunItemStack(
             "IDOE_ELECTRIC_EXPLOSIVE_PICKAXE",
             Material.DIAMOND_PICKAXE,
-            "&aElectric Explosive Pickaxe",
+            "&a电力爆炸镐",
             "",
-            "&fAn electric explosive pickaxe",
+            "&f电动的爆炸镐",
             "",
             LoreBuilder.powerCharged(0, 700)
         );
@@ -544,9 +542,9 @@ public class Setup {
         SlimefunItemStack electricShovel = new SlimefunItemStack(
             "IDOE_ELECTRIC_EXPLOSIVE_SHOVEL",
             Material.DIAMOND_SHOVEL,
-            "&aElectric Explosive Shovel",
+            "&a电力爆炸铲",
             "",
-            "&fAn electric explosive shovel",
+            "&f电动的爆炸铲",
             "",
             LoreBuilder.powerCharged(0, 900)
         );
@@ -559,76 +557,76 @@ public class Setup {
         SlimefunItemStack biomeCompass = new SlimefunItemStack(
             "IDOE_BIOMECOMPASS",
             Material.COMPASS,
-            "&aBiome Compass",
+            "&a生物群系探针",
             "",
-            "&fFind a biome within " + BiomeCompass.getRange(),
-            "&fblocks. Prioritizes new areas.",
+            "&f在" + BiomeCompass.getRange() + "格内搜索",
+            "&f指定的生物群系。优先指向新区域。",
             "",
-            "&8⇨ &aRemembers locations!",
+            "&8⇨ &a可记忆位置",
             "",
-            "&eSneak + R-Click AIR&7 Next Biome",
-            "&eSneak + R-Click BLOCK&7 Prev. Biome",
-            "&eR-Click &7to search for Biome"
+            "&e蹲下 + 右键点击 空气&7切换到下一个生物群系",
+            "&e蹲下 + 右键点击 任意方块&7切换到上一个生物群系",
+            "&e右键点击&7进行搜索"
         );
 
         SlimefunItemStack flameheartIdol = new SlimefunItemStack(
             "IDOE_IDOL_FLAMEHEART",
             Material.BLAZE_POWDER,
-            "&c&lFlameheart Idol",
-            "&eNever consumed!",
+            "&c&l火焰之心神像",
+            "&e不会消耗",
             "",
-            "&8⇨ &aLava Walker: &720%",
-            "&8⇨ &aFirefighter: &720%",
-            "&8⇨ &aWarrior: &720%",
-            "&8⇨ &aKnight: &730%",
+            "&8⇨ &a岩浆行者：&720%",
+            "&8⇨ &a消防员：&720%",
+            "&8⇨ &a战士：&720%",
+            "&8⇨ &a骑士：&730%",
             "",
-            "&eRight Click &7to toggle messages",
-            "&cFireproof"
+            "&e右键点击&7切换消息显示",
+            "&c防火"
         );
 
         SlimefunItemStack torrentIdol = new SlimefunItemStack(
             "IDOE_IDOL_TORRENT",
             Material.HEART_OF_THE_SEA,
-            "&b&lTorrent Idol",
-            "&eNever consumed!",
+            "&b&l激流神像",
+            "&e不会消耗",
             "",
-            "&8⇨ &aWater: &720%",
-            "&8⇨ &aAngel: &775%",
-            "&8⇨ &aWhirlwind: &760%",
-            "&8⇨ &aTraveller: &760%",
+            "&8⇨ &a潜水者：&720%",
+            "&8⇨ &a天使：&775%",
+            "&8⇨ &a旋风：&760%",
+            "&8⇨ &a旅行者：&760%",
             "",
-            "&eRight Click &7to toggle messages",
-            "&cFireproof"
+            "&e右键点击&7切换消息显示",
+            "&c防火"
         );
 
         SlimefunItemStack terranIdol = new SlimefunItemStack(
             "IDOE_IDOL_TERRAN",
             Material.HONEYCOMB,
-            "&a&lTerran Idol",
-            "&eNever consumed!",
+            "&a&l人族神像",
+            "&e不会消耗",
             "",
-            "&8⇨ &aCaveman: &750%",
-            "&8⇨ &aMiner: &720%",
-            "&8⇨ &aFarmer: &720%",
-            "&8⇨ &aHunter: &720%",
+            "&8⇨ &a穴居者：&750%",
+            "&8⇨ &a矿工：&720%",
+            "&8⇨ &a农夫：&720%",
+            "&8⇨ &a猎人：&720%",
             "",
-            "&eRight Click &7to toggle messages",
-            "&cFireproof"
+            "&e右键点击&7切换消息显示",
+            "&c防火"
         );
 
         SlimefunItemStack divineIdol = new SlimefunItemStack(
             "IDOE_IDOL_DIVINE",
             Material.AMETHYST_SHARD,
             "&d&lDivine Idol",
-            "&eNever consumed!",
+            "&e不会消耗",
             "",
-            "&8⇨ &aMagician: &780%",
-            "&8⇨ &aWizard: &720%",
-            "&8⇨ &aWise: &720%",
-            "&8⇨ &aAnvil: &720%",
+            "&8⇨ &a魔法师：&780%",
+            "&8⇨ &a巫师：&720%",
+            "&8⇨ &a智者：&720%",
+            "&8⇨ &a铁砧： &720%",
             "",
-            "&eRight Click &7to toggle messages",
-            "&cFireproof"
+            "&e右键点击&7切换消息显示",
+            "&c防火"
         );
 
         SlimefunItemStack enchantedGoldenApple = new SlimefunItemStack(
@@ -640,7 +638,7 @@ public class Setup {
             "IDOE_POTION_BAD_OMEN",
             Color.BLACK,
             new PotionEffect(PotionEffectType.BAD_OMEN, 6000, 0),
-            "&aPotion of Bad Omen"
+            "&a不详药水"
         );
         IDOEUtility.setGlow(badOmenPotion);
 

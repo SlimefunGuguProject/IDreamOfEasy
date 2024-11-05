@@ -5,6 +5,7 @@ import io.papermc.lib.PaperLib;
 import me.bunnky.idreamofeasy.listeners.IdolListener;
 import me.bunnky.idreamofeasy.listeners.MagnetoidListener;
 import me.bunnky.idreamofeasy.slimefun.setup.Setup;
+import net.guizhanss.minecraft.guizhanlib.updater.GuizhanUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,6 +13,7 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 
 import javax.annotation.Nonnull;
 import java.text.MessageFormat;
+import java.util.logging.Level;
 
 public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
     private static IDreamOfEasy instance;
@@ -22,7 +24,7 @@ public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
     private static final int PATCH = 6;
 
     public IDreamOfEasy() {
-        this.username = "Bunnky";
+        this.username = "SlimefunGuguProject";
         this.repo = "IDreamOfEasy";
     }
 
@@ -35,8 +37,15 @@ public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
 
         if (version != MAJOR || patchVersion != PATCH) {
             getLogger().severe("###############################################");
-            getLogger().severe("# IDOE only supports Minecraft version 1." + MAJOR + "." + PATCH + " #");
+            getLogger().severe("# IDOE 仅支持 Minecraft 版本 1." + MAJOR + "." + PATCH + " #");
             getLogger().severe("###############################################");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
+
+        if (!getServer().getPluginManager().isPluginEnabled("GuizhanLibPlugin")) {
+            getLogger().log(Level.SEVERE, "本插件需要 鬼斩前置库插件(GuizhanLibPlugin) 才能运行!");
+            getLogger().log(Level.SEVERE, "从此处下载: https://50l.cc/gzlib");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
@@ -45,6 +54,7 @@ public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
         getLogger().info(" ┃  ┃┃┣┫┣ ┣┫┃┃┃  ┃┃┣   ┣ ┣┫┗┓┗┫ ");
         getLogger().info(" ┻  ┻┛┛┗┗┛┛┗┛ ┗  ┗┛┻   ┗┛┛┗┗┛┗┛ ");
         getLogger().info("        IDOE by Bunnky          ");
+        getLogger().info("    易梦 - 粘液科技简中汉化组汉化    ");
         saveDefaultConfig();
 
         setupMetrics();
@@ -62,9 +72,9 @@ public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
 
     public void tryUpdate() {
         if (getConfig().getBoolean("options.auto-update", true)
-            && getDescription().getVersion().startsWith("Dev - ")
+            && getDescription().getVersion().startsWith("Build")
         ) {
-            new BlobBuildUpdater(this, getFile(), "IDreamOfEasy", "Dev").start();
+            GuizhanUpdater.start(this, getFile(), username, repo, "master");
         }
     }
 

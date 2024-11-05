@@ -19,6 +19,6 @@ public class SlimeRepeller extends MobRepeller {
 
     @Override
     protected String getRepelledEntityName() {
-        return "Slime";
+        return "史莱姆";
     }
 }

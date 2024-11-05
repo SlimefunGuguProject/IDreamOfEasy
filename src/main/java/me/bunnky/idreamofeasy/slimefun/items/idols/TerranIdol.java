@@ -52,7 +52,7 @@ public class TerranIdol extends Idol {
         if (!p.hasPotionEffect(PotionEffectType.HASTE)) {
             if (random.nextDouble() < 0.5) {
                 p.addPotionEffect(new PotionEffect(PotionEffectType.HASTE, 100, 1));
-                sendMessage(p, this.getItemName() + ": §r§a+Haste II");
+                sendMessage(p, this.getItemName() + ": §r§a+急迫 II");
             }
         }
 
@@ -72,7 +72,7 @@ public class TerranIdol extends Idol {
                         ItemStack doubledDrop = new ItemStack(drop.getType(), drop.getAmount() * (2 + extra));
                         e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), doubledDrop);
                     }
-                    sendMessage(p, this.getItemName() + ": §r§aDoubled ore drops!");
+                    sendMessage(p, this.getItemName() + ": §r§a双倍矿物掉落！");
                 }
             }
 
@@ -92,7 +92,7 @@ public class TerranIdol extends Idol {
 
                         e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), doubledDrop);
                     }
-                    sendMessage(p, this.getItemName() + ": §r§aDoubled crops!");
+                    sendMessage(p, this.getItemName() + ": §r§a双倍作物！");
                 }
             }
 
@@ -103,7 +103,7 @@ public class TerranIdol extends Idol {
                     ItemStack cropDrop = new ItemStack(type, 2);
                     e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), cropDrop);
 
-                    sendMessage(p, this.getItemName() + ": §r§aDoubled crops!");
+                    sendMessage(p, this.getItemName() + ": §r§a双倍作物！");
                 }
             }
         }
@@ -134,7 +134,7 @@ public class TerranIdol extends Idol {
                 drops.clear();
                 drops.addAll(doubledDrops);
 
-                sendMessage(killer, this.getItemName() + ": §r§aDoubled drops!");
+                sendMessage(killer, this.getItemName() + ": §r§a双倍掉落！");
             }
         }
     }

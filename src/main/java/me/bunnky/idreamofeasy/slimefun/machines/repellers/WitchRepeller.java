@@ -19,6 +19,6 @@ public class WitchRepeller extends MobRepeller {
 
     @Override
     protected String getRepelledEntityName() {
-        return "Witch";
+        return "女巫";
     }
 }
