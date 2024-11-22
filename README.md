@@ -53,6 +53,7 @@
 - **Slime Meal**: A Slime's favorite food! Use this on slimes to grow them instantly. Can be used to make super slimes.
 - **Alarm Clock**: A simple timer that will "ding" when the set timer is up. Toggle alarm mode for continuous dings.
 - **Bad Omen Potion**: A craftable potion that gives the Bad Omen effect. Useful if Pillager Outposts aren't reachable.
+- **Tome of Enlightenment**: An easy-to-craft tool that instantly unlocks a random research using your available XP. Great for players who don't care about XP costs and just want to speed run research unlocking.
 ### Idols
 Idols are powerful, combined versions of Slimefun talismans that apply the same effects as the talismans used to create them. They only work from your inventory—Ender Chest compatibility isn’t available yet! Idols are fireproof and never consumed.
 - **Flameheart**: The Flameheart Idol provides benefits in combat and fire-related situations. When the player is in contact with lava or fire, there is a 20% chance to gain Fire Resistance for 10 seconds. Additionally, when attacked by non-player entities, the Flameheart Idol offers a 20% chance to grant Strength III for 10 seconds, and a 30% chance to grant Regeneration I for 5 seconds.

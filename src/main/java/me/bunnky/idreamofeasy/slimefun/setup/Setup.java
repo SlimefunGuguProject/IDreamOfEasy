@@ -19,6 +19,7 @@ import me.bunnky.idreamofeasy.slimefun.items.BiomeCompass;
 import me.bunnky.idreamofeasy.slimefun.items.Chisel;
 import me.bunnky.idreamofeasy.slimefun.items.ElectricExplosivePickaxe;
 import me.bunnky.idreamofeasy.slimefun.items.ElectricExplosiveShovel;
+import me.bunnky.idreamofeasy.slimefun.items.TomeOfEnlightenment;
 import me.bunnky.idreamofeasy.slimefun.items.SlimeMeal;
 import me.bunnky.idreamofeasy.slimefun.items.idols.TerranIdol;
 import me.bunnky.idreamofeasy.slimefun.items.idols.FlameheartIdol;
@@ -614,6 +615,20 @@ public class Setup {
             "&eSneak + R-Click &7toggle alarm mode"
         );
 
+        SlimefunItemStack tomeOfEnlightenment = new SlimefunItemStack(
+            "IDOE_TOME_OF_ENLIGHTENMENT",
+            Material.ENCHANTED_BOOK,
+            "&aTome of Enlightenment",
+            "",
+            "&fInjects &nrandom&r &fknowledge",
+            "&fdirectly into your mind, skipping",
+            "&ftedious research steps",
+            "",
+            "&8⇨ &aInstant research!",
+            "",
+            "&eR-Click &7to use"
+        );
+
         SlimefunItemStack flameheartIdol = new SlimefunItemStack(
             "IDOE_IDOL_FLAMEHEART",
             Material.BLAZE_POWDER,
@@ -972,6 +987,12 @@ public class Setup {
             null, SlimefunItems.SMALL_CAPACITOR, null
         };
 
+        ItemStack[] tomeOfEnlightenmentRecipe = {
+            null, new ItemStack(Material.FEATHER), null,
+            new ItemStack(Material.LAPIS_LAZULI), new ItemStack(Material.WRITABLE_BOOK), new ItemStack(Material.LAPIS_LAZULI),
+            null, new ItemStack(Material.BLACK_DYE), null
+        };
+
         //////////////////////////////////////////////
         /////////////////// IDOLS ////////////////////
         //////////////////////////////////////////////
@@ -1057,7 +1078,7 @@ public class Setup {
         SlimefunItem electricShovelItem = new ElectricExplosiveShovel(group, electricShovel, RecipeType.MAGIC_WORKBENCH, electricShovelRecipe, 900);
         SlimefunItem slimeMealItem = new SlimeMeal(group, slimeMeal, RecipeType.MAGIC_WORKBENCH, slimeMealRecipe);
         SlimefunItem alarmClockItem = new AlarmClock(group, alarmClock, RecipeType.MAGIC_WORKBENCH, alarmClockRecipe);
-
+        SlimefunItem tomeOfEnlightenmentItem = new TomeOfEnlightenment(group, tomeOfEnlightenment, RecipeType.ENHANCED_CRAFTING_TABLE, tomeOfEnlightenmentRecipe);
 
         SlimefunItem badOmenPotionItem = new SlimefunItem(group, badOmenPotion, RecipeType.JUICER, badOmenPotionRecipe);
 
@@ -1110,6 +1131,7 @@ public class Setup {
         electricShovelItem.register(plugin);
         slimeMealItem.register(plugin);
         alarmClockItem.register(plugin);
+        tomeOfEnlightenmentItem.register(plugin);
 
         badOmenPotionItem.register(plugin);
 
