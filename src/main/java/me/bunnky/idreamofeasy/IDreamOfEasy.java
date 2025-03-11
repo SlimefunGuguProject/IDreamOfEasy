@@ -12,14 +12,15 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 
 import javax.annotation.Nonnull;
 import java.text.MessageFormat;
+import java.util.Arrays;
 
 public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
     private static IDreamOfEasy instance;
     private final String username;
     private final String repo;
 
-    private static final int MAJOR = 20;
-    private static final int PATCH = 6;
+    private static final int MAJOR = 21;
+    private static final int[] PATCH = {0, 1, 2}; // Allow multiple patches
 
     public IDreamOfEasy() {
         this.username = "Bunnky";
@@ -32,10 +33,11 @@ public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
 
         int version = PaperLib.getMinecraftVersion();
         int patchVersion = PaperLib.getMinecraftPatchVersion();
+        boolean isSupportedPatch = Arrays.stream(PATCH).anyMatch(p -> p == patchVersion);
 
-        if (version != MAJOR || patchVersion != PATCH) {
+        if (version != MAJOR || !isSupportedPatch) {
             getLogger().severe("###############################################");
-            getLogger().severe("# IDOE only supports Minecraft version 1." + MAJOR + "." + PATCH + " #");
+            getLogger().severe("# IDOE only supports Minecraft version 1." + MAJOR + ".1 and 1." + MAJOR + ".2 #");
             getLogger().severe("###############################################");
             getServer().getPluginManager().disablePlugin(this);
             return;
