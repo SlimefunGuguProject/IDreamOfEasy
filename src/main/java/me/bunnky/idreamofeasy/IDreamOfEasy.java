@@ -1,27 +1,26 @@
 package me.bunnky.idreamofeasy;
 
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.BlobBuildUpdater;
-import io.papermc.lib.PaperLib;
-import me.bunnky.idreamofeasy.listeners.IdolListener;
-import me.bunnky.idreamofeasy.listeners.MagnetoidListener;
-import me.bunnky.idreamofeasy.slimefun.setup.Setup;
-import net.guizhanss.minecraft.guizhanlib.updater.GuizhanUpdater;
+import java.text.MessageFormat;
+import java.util.logging.Level;
+
+import javax.annotation.Nonnull;
+
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-
-import javax.annotation.Nonnull;
-import java.text.MessageFormat;
-import java.util.logging.Level;
+import me.bunnky.idreamofeasy.listeners.IdolListener;
+import me.bunnky.idreamofeasy.listeners.MagnetoidListener;
+import me.bunnky.idreamofeasy.slimefun.setup.Setup;
+import net.guizhanss.minecraft.guizhanlib.updater.GuizhanUpdater;
 
 public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
     private static IDreamOfEasy instance;
     private final String username;
     private final String repo;
 
-    private static final int MAJOR = 20;
-    private static final int PATCH = 6;
+    //private static final int MAJOR = 20;
+    //private static final int PATCH = 6;
 
     public IDreamOfEasy() {
         this.username = "SlimefunGuguProject";
@@ -32,9 +31,10 @@ public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
     public void onEnable() {
         instance = this;
 
-        int version = PaperLib.getMinecraftVersion();
-        int patchVersion = PaperLib.getMinecraftPatchVersion();
+        //int version = PaperLib.getMinecraftVersion();
+        //int patchVersion = PaperLib.getMinecraftPatchVersion();
 
+        /*
         if (version != MAJOR || patchVersion != PATCH) {
             getLogger().severe("###############################################");
             getLogger().severe("# IDOE 仅支持 Minecraft 版本 1." + MAJOR + "." + PATCH + " #");
@@ -42,6 +42,7 @@ public class IDreamOfEasy extends JavaPlugin implements SlimefunAddon {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
+        */
 
         if (!getServer().getPluginManager().isPluginEnabled("GuizhanLibPlugin")) {
             getLogger().log(Level.SEVERE, "本插件需要 鬼斩前置库插件(GuizhanLibPlugin) 才能运行!");
