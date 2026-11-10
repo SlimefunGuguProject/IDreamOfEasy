@@ -4,11 +4,7 @@
 
 ## 下载
 
-<p align="center">
-  <a href="https://builds.guizhanss.com/SlimefunGuguProject/IDreamOfEasy/master">
-    <img src="https://builds.guizhanss.com/api/badge/SlimefunGuguProject/IDreamOfEasy/master/latest" alt="Build status"/>
-  </a>
-</p>
+[下载 IDreamOfEasy](https://resources.guizhanss.com/plugin/IDreamOfEasy)
 
 ## 如何工作
 > [!WARNING]
